@@ -4,7 +4,7 @@ import time
 from bs4 import BeautifulSoup
 from selenium.webdriver.chrome.options import Options
 
-keys = "東京駅 コーヒー豆"
+keys = "東京駅 スペシャルティコーヒー豆"
 options = Options()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
@@ -47,20 +47,3 @@ for i in range(len(search_results)):
         break
 
 driver.close()
-
-# time.sleep(3)
-
-# title = soup.find(
-#     class_="GLOBAL__gm2-headline-5 section-hero-header-title-title")
-# print(title)
-# link = soup.find_all(class_="section-info-text")
-
-
-# print("-------------------------------")
-# print(title.text.strip())
-# print(link[0].text.strip())
-# print(link[2].text.strip())
-# print(link[3].text.strip())
-# print("-------------------------------")
-
-# driver.close()
